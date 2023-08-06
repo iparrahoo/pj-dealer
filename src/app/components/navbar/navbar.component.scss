@@ -1,0 +1,13 @@
+@import '/src/variables.scss';
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  height: $navbar-height;
+  padding: 1rem;
+}
+
+.pj-dealer__custom-logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}

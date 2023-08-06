@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+// #region Logo.
+
+.pj-dealer__custom-logo {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.pj-custom-logo__label {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  transition: transform $average-animation-duration, opacity $average-animation-duration;
+}
+
+.pj-custom-logo__label--swap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform-origin: center top;
+}
+
+.pj-custom-logo__label--fix {
+  display: block;
+  opacity: 0;
+  transform-origin: center bottom;
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.pj-custom-logo__label--primary {
+  color: $primary-color;
+}
+
+.pj-custom-logo__label--secondary {
+  color: $secondary-color;
+}
+
+.pj-dealer__custom-logo:hover .pj-custom-logo__label--swap {
+  opacity: 0;
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.pj-dealer__custom-logo:hover .pj-custom-logo__label--fix {
+  opacity: 1;
+  transform: rotate3d(1, 0, 0, 0deg);
+}
+
+// #endregion

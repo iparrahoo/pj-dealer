@@ -1,0 +1,12 @@
+@import '/src/variables.scss';
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.main-container::ng-deep app-footer {
+  margin-top: auto;
+}
