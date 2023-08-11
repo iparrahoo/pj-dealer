@@ -1,5 +1,6 @@
 <div class="navbar-container">
 
+  <!-- Logo. -->
   <a class="pj-dealer__custom-logo" routerLink="/">
     <span class="pj-custom-logo__label pj-custom-logo__label--swap">
       <span class="pj-custom-logo__label--primary">P.J.&nbsp;</span>
@@ -10,5 +11,25 @@
       <span class="pj-custom-logo__label--primary">Nationale</span>
     </span>
   </a>
+
+  <div class="navbar-links">
+
+    <!-- Home. -->
+    <a class="navbar-link" routerLink="/">
+      <i class="pi pi-home navbar-link__icon"></i>
+      <div class="navbar-link__label">Home</div>
+    </a>
+
+    <!-- Sign in. -->
+    <a class="navbar-link">
+      <i class="pi pi-user navbar-link__icon"></i>
+      <div class="navbar-link__label">Sign in</div>
+    </a>
+
+  </div>
+
+  <button class="btn-navbar-hamburger" (click)="openNavbar()">
+    <span class="navbar-hamburger"></span>
+  </button>
 
 </div>

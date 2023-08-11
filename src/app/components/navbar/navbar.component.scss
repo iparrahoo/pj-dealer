@@ -1,13 +1,123 @@
 @import '/src/variables.scss';
+@import '/src/assets/animations.scss';
 
 .navbar-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: $navbar-height;
   padding: 1rem;
 }
 
+// #region Logo.
+
 .pj-dealer__custom-logo {
+  animation: appear-top $avg-animation-duration;
   font-size: 1.25rem;
   font-weight: bold;
 }
+
+// #endregion
+
+// #region Navbar links.
+
+.navbar-links {
+  animation: appear-top $avg-animation-duration;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  padding: 0 1em;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  color: $font-color;
+  text-decoration: none;
+  padding: 0.25em;
+  transition: color $avg-transition-duration;
+}
+
+.navbar-link:hover {
+  color: $primary-color;
+}
+
+.navbar-link__label {
+  white-space: pre;
+}
+
+// #endregion
+
+// #region Hamburger.
+
+.btn-navbar-hamburger {
+  border: none;
+  display: none;
+  outline: none;
+  animation: appear-top $avg-animation-duration;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.75em 0.5em;
+}
+
+.btn-navbar-hamburger:hover {
+  .navbar-hamburger,
+  .navbar-hamburger::before,
+  .navbar-hamburger::after {
+    background-color: $primary-color;
+  }
+}
+
+.navbar-hamburger,
+.navbar-hamburger::before,
+.navbar-hamburger::after {
+  background-color: $font-color;
+  border-radius: 32px;
+  height: 2px;
+  transition: background-color $avg-transition-duration;
+}
+
+.navbar-hamburger {
+  display: block;
+  position: relative;
+  width: 12px;
+}
+
+.navbar-hamburger::before,
+.navbar-hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.navbar-hamburger::before {
+  top: -4px;
+}
+
+.navbar-hamburger::after {
+  bottom: -4px;
+}
+
+// #endregion
+
+// #region Responsive devices.
+
+/* For Tablet View */
+@media screen and (min-width: 768px) {
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-width: 480px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .btn-navbar-hamburger {
+    display: block;
+  }
+}
+
+// #endregion

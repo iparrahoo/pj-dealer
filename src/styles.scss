@@ -1,5 +1,10 @@
+// -- Fonts;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+// -- PrimeNG.
+@import "primeicons/primeicons.css";
+
+// -- Application global variables.
 @import './variables.scss';
 
 * {
@@ -16,6 +21,24 @@ body {
   font-family: Inter, sans-serif;
 }
 
+.pj-focus-backdrop {
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: backdrop-filter $avg-transition-duration, background-color $avg-transition-duration;
+}
+
+body.pj-focus .pj-focus-backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  z-index: 100;
+}
+
 // #region Logo.
 
 .pj-dealer__custom-logo {
@@ -27,7 +50,7 @@ body {
 .pj-custom-logo__label {
   font-family: Inter, sans-serif;
   font-weight: 600;
-  transition: transform $average-animation-duration, opacity $average-animation-duration;
+  transition: transform $avg-transition-duration, opacity $avg-transition-duration;
 }
 
 .pj-custom-logo__label--swap {

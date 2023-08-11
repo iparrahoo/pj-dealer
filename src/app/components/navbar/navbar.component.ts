@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  /**
+   * Open navbar for responsive view.
+   */
+  public openNavbar(): void {
+    document.body.classList.add('pj-focus');
+  }
+
 }
