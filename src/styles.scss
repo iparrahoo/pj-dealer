@@ -21,6 +21,122 @@ body {
   font-family: Inter, sans-serif;
 }
 
+app-sign-in {
+  flex: 1 1 100%;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.pj-p-rel {
+  position: relative;
+}
+
+// #region PrimeNG.
+
+.pj.p-component {
+  font-family: Inter, sans-serif;
+}
+
+// #region Button.
+
+.pj.p-button:focus {
+  box-shadow: none;
+}
+
+.pj .p-button-label {
+  font-weight: 400;
+}
+
+.pj--primary.p-button {
+  background: $primary-color;
+  border: 1px solid $primary-color;
+}
+
+.pj--primary.p-button:enabled:active {
+  background: $primary-color-600;
+  border-color: $primary-color-600;
+}
+
+.pj--primary.p-button:enabled:hover {
+  background: $primary-color-600;
+  border-color: $primary-color-600;
+}
+
+.pj--secondary.p-button {
+  background: $secondary-color;
+  border: 1px solid $secondary-color;
+}
+
+.pj--secondary.p-button:enabled:active {
+  background: $secondary-color-600;
+  border-color: $secondary-color-600;
+}
+
+.pj--secondary.p-button:enabled:hover {
+  background: $secondary-color-600;
+  border-color: $secondary-color-600;
+}
+
+// #endregion
+
+// #region Checkbox.
+
+p-checkbox.p-element + label {
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+.pj.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+  box-shadow: none;
+}
+
+.pj--primary.p-checkbox .p-checkbox-box.p-highlight {
+  border-color: $primary-color;
+  background: $primary-color;
+}
+
+.pj--primary.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+  border-color: $primary-color;
+}
+
+.pj--primary.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+  border-color: $primary-color;
+}
+
+.pj--primary.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+  border-color: $primary-color-600;
+  background: $primary-color-600;
+}
+
+// #region endregion
+
+// #region Input Text.
+
+.pj.p-inputtext {
+  border-width: 2px;
+  color: $font-color;
+}
+
+.pj.p-inputtext:enabled:focus {
+  box-shadow: none;
+}
+
+.pj--primary.p-inputtext:enabled:focus {
+  border-color: $primary-color;
+}
+
+.pj--primary.p-inputtext:enabled:hover {
+  border-color: $primary-color;
+}
+
+// #endregion
+
+// endregion
+
+// #region Backdrop.
+
 .pj-focus-backdrop {
   background-color: transparent;
   backdrop-filter: blur(0px);
@@ -38,6 +154,18 @@ body.pj-focus .pj-focus-backdrop {
   backdrop-filter: blur(16px);
   z-index: 100;
 }
+
+// #endregion
+
+// #region Form.
+
+.pj-form-v-flex {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+// #endregion
 
 // #region Logo.
 

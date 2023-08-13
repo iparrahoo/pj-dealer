@@ -5,6 +5,7 @@
   flex-direction: column;
   height: 100%;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 .main-container::ng-deep app-footer {

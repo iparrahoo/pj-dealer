@@ -1,0 +1,88 @@
+<div class="sign-in-container">
+  <div class="sign-in__forms-wrapper"
+       [class.sign-in__forms-wrapper--registration]="isRegistration">
+
+    <!-- Sign in form. -->
+    <form class="sign-in__form">
+
+      <div class="sign-in__welcome-back">
+        Welcome <span class="primary-color">Back</span>!
+      </div>
+
+      <div class="pj-form-v-flex">
+        <label htmlFor="siNid">National Id number</label>
+        <input autofocus pInputText class="pj pj--primary" id="siNid" />
+      </div>
+
+      <div class="pj-form-v-flex pj-p-rel">
+        <label htmlFor="siPassword">Password</label>
+        <input pInputText class="pj pj--primary" id="siPassword" type="password"/>
+        <button class="sign-in__btn-show-password" type="button" (click)="showHidePassword($event)">
+          <i class="pi pi-eye"></i>
+        </button>
+      </div>
+
+      <div>
+        <p-checkbox styleClass="pj pj--primary" inputId="rememberMe" [binary]="true"></p-checkbox>
+        <label class="sign-in__remember-me" for="rememberMe">Remember me</label>
+      </div>
+
+      <p-button class="sign-in__btn-submit" styleClass="pj pj--secondary" label="Sign In"></p-button>
+
+      <button class="sign-in__link-swap-form" type="button" (click)="showHideRegistrationForm(true)">
+        Do not have an account yet?
+      </button>
+
+    </form>
+
+    <div class="sign-in__image-wrapper">
+      <img class="sign-in__image" src="assets/svgs/construction-bg.svg"/>
+    </div>
+
+    <form class="sign-up__form">
+
+      <div class="sign-up__register-text">
+        Create <span class="primary-color">Account</span>!
+      </div>
+
+      <div class="pj-form-v-flex">
+        <label htmlFor="firstName">First name</label>
+        <input pInputText class="pj pj--primary" id="firstName" />
+      </div>
+
+      <div class="pj-form-v-flex">
+        <label htmlFor="lastName">Last name</label>
+        <input pInputText class="pj pj--primary" id="lastName" />
+      </div>
+
+      <div class="pj-form-v-flex">
+        <label htmlFor="suNid">National Id number</label>
+        <input pInputText class="pj pj--primary" id="suNid" />
+      </div>
+
+      <div class="pj-form-v-flex pj-p-rel">
+        <label htmlFor="suPassword">Password</label>
+        <input pInputText class="pj pj--primary" id="suPassword" type="password"/>
+        <button class="sign-in__btn-show-password" type="button" (click)="showHidePassword($event)">
+          <i class="pi pi-eye"></i>
+        </button>
+      </div>
+
+      <div class="pj-form-v-flex pj-p-rel">
+        <label htmlFor="confirmPassword">Confirm password</label>
+        <input pInputText class="pj pj--primary" id="confirmPassword" type="password"/>
+        <button class="sign-in__btn-show-password" type="button" (click)="showHidePassword($event)">
+          <i class="pi pi-eye"></i>
+        </button>
+      </div>
+
+      <p-button class="sign-up__btn-submit" styleClass="pj pj--secondary" label="Sign Up"></p-button>
+
+      <button class="sign-in__link-swap-form" type="button" (click)="showHideRegistrationForm(false)">
+        Already have an account?
+      </button>
+
+    </form>
+
+  </div>
+</div>
